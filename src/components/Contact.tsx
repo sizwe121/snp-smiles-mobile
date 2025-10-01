@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Instagram, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, MessageCircle, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -46,7 +46,7 @@ const Contact = () => {
       icon: <MapPin className="w-6 h-6" />,
       title: "Location",
       content: "Johannesburg, South Africa",
-      link: "#",
+      link: "https://www.google.com/maps/place/Johannesburg",
     },
     {
       icon: <Instagram className="w-6 h-6" />,
@@ -56,8 +56,9 @@ const Contact = () => {
     },
   ];
 
-  const whatsappNumber = "27643489310";
-  const whatsappMessage = "Hi! I'd like to book a dental hygiene appointment.";
+  const whatsappZwelakhe = "27643489310";
+  const whatsappPhozisa = "27670350539";
+  const whatsappMessage = "Hi! I'd like to book a dental appointment.";
 
   return (
     <section id="contact" className="section-padding bg-gradient-subtle">
@@ -66,9 +67,13 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
             Ready to book your appointment? We're here to help!
           </p>
+          <div className="flex items-center justify-center gap-2 text-primary font-semibold">
+            <Clock className="w-5 h-5" />
+            <p>Response within 24 hours</p>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -111,25 +116,25 @@ const Contact = () => {
 
             {/* WhatsApp Buttons */}
             <div className="mt-6 space-y-3">
-              <p className="text-center text-sm text-muted-foreground mb-3">Or message us directly:</p>
+              <p className="text-center text-sm text-muted-foreground mb-3">Or message us on WhatsApp:</p>
               <a
-                href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+                href={`https://wa.me/${whatsappZwelakhe}?text=${encodeURIComponent(whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
               >
-                <Button variant="outline" className="w-full gap-2">
+                <Button variant="outline" className="w-full gap-2 border-green-600 text-green-600 hover:bg-green-50 hover:text-green-700">
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Zwelakhe
                 </Button>
               </a>
               <a
-                href={`https://wa.me/27670350539?text=${encodeURIComponent(whatsappMessage)}`}
+                href={`https://wa.me/${whatsappPhozisa}?text=${encodeURIComponent(whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
               >
-                <Button variant="outline" className="w-full gap-2">
+                <Button variant="outline" className="w-full gap-2 border-green-600 text-green-600 hover:bg-green-50 hover:text-green-700">
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Phozisa
                 </Button>
@@ -137,7 +142,7 @@ const Contact = () => {
             </div>
           </Card>
 
-          {/* Contact Information */}
+          {/* Contact Information & Map */}
           <div className="space-y-6">
             <Card className="p-8 bg-card animate-scale-in" style={{ animationDelay: "100ms" }}>
               <h3 className="text-2xl font-bold text-charcoal mb-6">Contact Information</h3>
@@ -162,18 +167,32 @@ const Contact = () => {
               </div>
             </Card>
 
-            <Card className="p-8 bg-gradient-hero text-white animate-scale-in" style={{ animationDelay: "200ms" }}>
+            {/* Google Maps Embed */}
+            <Card className="p-0 overflow-hidden animate-scale-in" style={{ animationDelay: "150ms" }}>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228847.33199386427!2d27.851996599999998!3d-26.204103399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1234567890"
+                width="100%"
+                height="250"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Johannesburg Location"
+              />
+            </Card>
+
+            <Card className="p-8 bg-charcoal text-white animate-scale-in" style={{ animationDelay: "200ms" }}>
               <h3 className="text-2xl font-bold mb-4">Ready to Book?</h3>
               <p className="mb-6 leading-relaxed">
-                Contact us today to schedule your mobile dental hygiene appointment. 
-                We bring professional oral care right to your doorstep!
+                Contact us today to schedule your mobile dental clinic appointment. 
+                We bring professional dental care right to your doorstep!
               </p>
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-white/90 w-full"
+                className="bg-white text-charcoal hover:bg-white/90 w-full font-bold"
                 onClick={() => document.querySelector("#contact form")?.scrollIntoView({ behavior: "smooth" })}
               >
-                Book Your Appointment
+                Book Your Visit Today
               </Button>
             </Card>
           </div>

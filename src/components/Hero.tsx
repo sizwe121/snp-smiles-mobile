@@ -27,17 +27,17 @@ const Hero = () => {
           S&P Smiles Co.
         </h1>
         <p className="text-xl md:text-3xl text-white/95 mb-8 font-light">
-          Oral health made easy, wherever you are.
+          Bringing a dentist to your doorstep.
         </p>
         <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto">
-          Professional mobile dental hygiene services bringing quality care to your doorstep
+          Professional mobile dental clinic delivering quality care wherever you are
         </p>
         <Button
           size="lg"
           onClick={scrollToContact}
-          className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-6 shadow-premium hover-lift"
+          className="bg-white text-charcoal hover:bg-white/90 text-lg px-8 py-6 shadow-premium hover-lift font-bold"
         >
-          Book Now
+          Book Your Visit Today
         </Button>
       </div>
 

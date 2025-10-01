@@ -32,10 +32,12 @@ const About = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-charcoal mb-6">
             About <span className="text-gradient">S&P Smiles Co.</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            We are two final-year oral hygienists passionate about bringing quality dental care 
-            to schools, homes, and communities. S&P Smiles Co. makes oral health more accessible, 
-            professional, and convenient.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
+            We are two passionate oral hygienists bringing quality dental care to schools, homes, and communities. 
+            S&P Smiles Co. makes oral health accessible, professional, and convenient.
+          </p>
+          <p className="text-xl md:text-2xl text-charcoal max-w-3xl mx-auto font-semibold">
+            We believe everyone deserves access to a confident smile, without the barriers of distance, cost, or time.
           </p>
         </div>
 

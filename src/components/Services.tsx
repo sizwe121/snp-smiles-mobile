@@ -1,4 +1,4 @@
-import { Sparkles, Shield, Smile, Star, School, Home } from "lucide-react";
+import { Sparkles, Shield, Smile, GraduationCap, Home, Heart } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Services = () => {
@@ -14,24 +14,24 @@ const Services = () => {
       description: "Strengthen tooth enamel and prevent cavities with our professional fluoride applications.",
     },
     {
-      icon: <Smile className="w-10 h-10" />,
+      icon: <Heart className="w-10 h-10" />,
       title: "Sensitivity Relief",
       description: "Specialized treatments to reduce tooth sensitivity and improve comfort.",
     },
     {
-      icon: <Star className="w-10 h-10" />,
+      icon: <Smile className="w-10 h-10" />,
       title: "Teeth Whitening",
       description: "Optional professional whitening services for a confident, radiant smile.",
     },
     {
-      icon: <School className="w-10 h-10" />,
+      icon: <GraduationCap className="w-10 h-10" />,
       title: "School Programs",
       description: "Comprehensive oral health workshops and screenings for schools and educational institutions.",
     },
     {
       icon: <Home className="w-10 h-10" />,
       title: "Home & Corporate Visits",
-      description: "Convenient mobile services for homes, offices, and corporate wellness programs.",
+      description: "Mobile dental clinic services bringing professional dental care to your location.",
     },
   ];
 
@@ -43,7 +43,7 @@ const Services = () => {
             Our <span className="text-gradient">Services</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive mobile dental hygiene services tailored to your needs
+            Comprehensive mobile dental clinic services tailored to your needs
           </p>
         </div>
 

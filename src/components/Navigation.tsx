@@ -54,7 +54,7 @@ const Navigation = () => {
                 {link.label}
               </button>
             ))}
-            <Button onClick={() => scrollToSection("#contact")}>Book Now</Button>
+            <Button onClick={() => scrollToSection("#contact")} className="font-bold">Book Your Visit Today</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,9 +80,9 @@ const Navigation = () => {
             ))}
             <Button
               onClick={() => scrollToSection("#contact")}
-              className="w-full mt-4"
+              className="w-full mt-4 font-bold"
             >
-              Book Now
+              Book Your Visit Today
             </Button>
           </div>
         )}
